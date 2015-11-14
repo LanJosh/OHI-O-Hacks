@@ -3,10 +3,11 @@ import java.util.Scanner;
 import java.util.ArrayList;
 
 /*
- * Parses ^ delimited file containing job information
+ * Parses tab delimited file containing job information
  * 
  * 1459 Joshua Lan
  */
+
 public class JobsParser implements IParser  {
 
 	public ArrayList <String[]> allJobInfo;
@@ -19,7 +20,7 @@ public class JobsParser implements IParser  {
 	
     public ArrayList<String[]> parse(File data) {
         try (Scanner sc = new Scanner(data)){
-            sc.useDelimiter("^");
+            sc.useDelimiter("\t");
 
             // Data contains 5 columns
             while (sc.hasNext()){
