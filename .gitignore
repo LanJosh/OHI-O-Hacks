@@ -14,3 +14,4 @@ hs_err_pid*
 # User specific configs
 .classpath
 .project
+.DS_Store
