@@ -10,24 +10,26 @@ import java.util.Map;
  *
  */
 public class PointWeigher {
-	List<String[]> dataSet;
-	List<String> words;
-	Map<String, Integer> wordFrequency;
+	public List<String[]> jobDataSet;
+	public List<String[]> studentDataSet;
 	
 	/**
-	 * @param: an ArrayList<String[]> where each string[] is a row and each string is a column
+	 * 
+	 * @param dataSet1: jobs ArrayList<String[]> where each string[] is a row and each string is a column
+	 * @param dataSet2: students ArrayList<String[]> where each string[] is a row and each string is a column
 	 */
-	public PointWeigher(ArrayList<String[]> dataSet) {
-		this.dataSet = dataSet;
-		words = new ArrayList<>();
-		wordFrequency = new HashMap<>();
+	public PointWeigher(List<String[]> dataSet1, List<String[]> dataSet2) {
+		jobDataSet = dataSet1;
+		studentDataSet = dataSet2;
 	}
 	
 	/**
 	 * Creates a list of all words
+	 * @param: the data set you want to parse
 	 */
-	public void parseForWords() {
-		for (String[] row : dataSet) {
+	public List<String> parseForWords(List<String[]> data) {
+		List<String> words = new ArrayList<>();
+		for (String[] row : data) {
 			for (String column: row) {
 				List<String> items = Arrays.asList(column.split("[ .,?!]+"));
 				for (String item : items) {
@@ -35,16 +37,20 @@ public class PointWeigher {
 				}
 			}
 		}
+		return words;
 	}
 	
 	/**
 	 * Creates a map that has the frequency of every word
+	 * @param: A list of strings
 	 */
-	public void wordFrequency() {
+	public Map<String, Integer> getWordFrequency(List<String> words) {
+		Map<String, Integer> wordFreq = new HashMap<>();
 	    for (String w : words) {
-	        Integer n = wordFrequency.get(w);
+	        Integer n = wordFreq.get(w);
 	        n = (n == null) ? 1 : ++n;
-	        wordFrequency.put(w, n);
+	        wordFreq.put(w, n);
 	    }
+	    return wordFreq;
 	}
 }
