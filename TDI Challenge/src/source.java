@@ -9,11 +9,16 @@ public class source {
 		System.out.println("Running!\n");
 		try {
 		// TODO Read data from files
-			String cwd = new File("src/Files/TDA Students Test.csv").getAbsolutePath();
+			//--Read student resume data
+			String cwd =  new File("src/Files/TDA Students Test.csv").getAbsolutePath();
 			System.out.println(cwd);
 			File studentData = new File(cwd);
 			StudentDataParser sdp = new StudentDataParser(studentData);
         	sdp.parse(studentData);
+        	
+        	//--Read job postings data
+        	//TODO add file input code here
+        	
         	
 		// TODO Parse data & return weights
 		

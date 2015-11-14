@@ -20,7 +20,7 @@ public class StudentDataParser implements IParser{
 	  try {
 		  
 		  Scanner fIn = new Scanner(file);
-		  fIn.useDelimiter("^");
+		  fIn.useDelimiter("^ \"");
 		  
 		  
           //--Loop through the entire file
