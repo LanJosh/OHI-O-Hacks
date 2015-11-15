@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 &quantitiative
 ,data
 ,analytics
@@ -269,8 +268,3 @@
 
 &confident,
 selfconfident
-&engineering,solidworks,matlab,c++,java,experiment,test
-&computer science,c++,matlab,java
-&economics,history
-&general office,manage
-&science,experiment,test

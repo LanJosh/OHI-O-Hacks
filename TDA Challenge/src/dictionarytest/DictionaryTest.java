@@ -12,6 +12,11 @@ public class DictionaryTest {
         try (Scanner sc = new Scanner(file)) {
             while (sc.hasNext()) {
                 String next = sc.nextLine();
+                /**
+                 * String[] next = sc.nextLine().split(",| |&"); for (int x = 0;
+                 * x < next.length; x++) { System.out.println(next[x]); }
+                 **/
+
                 if (next.length() > 0
                         && (next.charAt(0) == ',' || next.charAt(0) == '&')) {
                     a.add(next.substring(1));
