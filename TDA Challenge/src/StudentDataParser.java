@@ -20,12 +20,27 @@ public class StudentDataParser implements IParser{
 	  try {
 		  
 		  Scanner fIn = new Scanner(file);
-		  fIn.useDelimiter("^ \"");
-		  
 		  
           //--Loop through the entire file
 		  while (fIn.hasNext()) {
-			  System.out.println(fIn.next());
+			  //--Pull each line into an array
+			  String[] lineInput = fIn.nextLine().split("\\W");
+			 
+			  for(int i = 0; i < lineInput.length; i++) {
+				  
+				  //--Eliminate any one letter words, except the language 'C'
+				  if( isWordMeaningless(lineInput[i])) {
+					  continue;
+				  }//end if
+				  
+				  //--Process the word 
+				  processWord(lineInput[i]);
+				  
+System.out.print(lineInput[i] + " ");
+			  }//end loop
+			  
+			  //--Visually Separate each read line
+			  System.out.println("\n");
         	  
               
           }//end loop
@@ -38,6 +53,26 @@ public class StudentDataParser implements IParser{
       
     return studentInfo;
     }//--end method
+  
+  private void processWord(String word) {
+	  StringBuffer sb = new StringBuffer();
+	  
+  }//end method
+  
+  //--Method to determine if a string is numeric
+  boolean isNumeric(String str) { 
+  	return str.matches("-?\\d+(\\.\\d+)?");
+  }//end method
+  
+  //--Determines whether or not a word is not important to the skill matching of this program
+  boolean isWordMeaningless(String word) {
+	  
+	  if(word.equals("C") && word.length() <= 1) return true;
+	  if(isNumeric(word))	return false;
+	  
+	  else return false; 
+  }//end method
+		  
 
 }//end class
 
