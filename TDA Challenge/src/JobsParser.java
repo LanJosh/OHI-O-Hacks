@@ -10,34 +10,36 @@ import java.util.ArrayList;
 
 public class JobsParser implements IParser  {
 
-	public ArrayList <String[]> allJobInfo;
+	public ArrayList <String[]> employerProfiles;
 	public File data;
 	
 	public JobsParser(File data){
-		allJobInfo = new ArrayList<String[]>();
+		employerProfiles = new ArrayList<String[]>();
 		this.data = data;
 	}
 	
     public ArrayList<String[]> parse(File data) {
         try (Scanner sc = new Scanner(data)){
-            sc.useDelimiter("\t");
-
             // Data contains 5 columns
-            while (sc.hasNext()){
-                for (int i = 0; i < 5; i++) {
-                String[] jobInfo = new String[5];
-                String descriptionData = sc.next(); 
-                System.out.print(descriptionData + "|");
-                jobInfo[i] = descriptionData;
-                allJobInfo.add(jobInfo);
-                System.out.println();
-                }
+            while (sc.hasNext()) {
+            	sc.useDelimiter("///");
+            	String[] employerProfile = new String[5];
+        		String line = "";
+            	for (int i = 0; i < 5; i++) {
+            		if (sc.hasNext()) {
+            			 line = sc.next();
+            		}
+            		line.replaceAll("[^a-zA-Z0-9]+","");
+            		employerProfile[i] = line;
+            	}
+            	// sc.nextLine();
+            	
+            	employerProfiles.add(employerProfile);
             }
         } catch (Exception e) {
-            System.out.println("File Not Found");
+            e.printStackTrace();
         }
-        
-    return allJobInfo;
+    return employerProfiles;
     }
 
 }
