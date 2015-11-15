@@ -3,7 +3,11 @@
 ,analytics
 ,modeling
 ,analytical
+,analyzing
 ,visualization
+,statistical
+,graphing
+,representations
 
 &solving
 ,analysis
@@ -14,6 +18,7 @@
 ,knowledge
 ,experience
 ,success
+,certified
 
 &language
 ,oral
@@ -28,6 +33,17 @@
 ,networking
 ,presentation
 ,terminology
+,german
+,chinese
+,spanish
+,attitude
+,journal
+,calls
+,politeness
+,soninke
+,seminars
+,fulani
+,wolof
 
 &gpa
 ,grade
@@ -39,6 +55,8 @@
 ,standing
 ,credit
 ,academic
+,record
+,status
 
 &eager
 ,interest
@@ -107,6 +125,17 @@
 ,.net
 ,asp.net
 ,java
+,digital
+,digitized
+,virtual
+,simulation
+,machinery
+,microcase
+,spreadsheet
+,microsoft
+,solidworks
+,autocad
+,zotero
 
 &business
 ,market
@@ -116,6 +145,7 @@
 ,entrepreneurial
 ,entrepreneur
 ,finance
+,financial
 ,cash
 ,accounting
 ,banking
@@ -123,11 +153,17 @@
 ,credit
 ,insurance
 ,ecommerce
+,econometrics
+,marketable
+,transactions
+,cost
+,economics
 
 &math
 ,mathematical
+,mathematics
 ,statistics
-,regreassion
+,regression
 ,logistic
 ,linear
 ,cluster
@@ -136,19 +172,34 @@
 ,chaid
 ,cart
 ,spss
+,metrics
+,statistical
+,probability
 
 &strong
 ,experienced
 ,effective
+,effectively
 ,great
 ,competitive
-,knowlegable
+,knowledgeable
 ,successful
+,successfully
 ,excellent
 ,welldeveloped
 ,thrive
 ,confident
 ,aptitude
+,solid
+,trained
+,advanced
+,swell
+,dept
+,proficiency
+
+&intermediate
+,beginner
+,elementary
 
 &course
 ,club
@@ -156,8 +207,8 @@
 ,training
 ,projects
 ,project
-
-&community
+,journal
+,community
 ,service
 
 &environment
@@ -171,9 +222,19 @@
 
 &teaching
 ,professional
+,professionalism
 ,teach
 ,tutoring
 ,tutor
+,mentor
+,mentors
+,tutees
+,trained
+,supervisor
+,student
+,manager
+,lifeguard
+,researcher
 
 &major
 ,marketing
@@ -185,6 +246,7 @@
 ,physics
 ,math
 ,chemistry
+,chemical
 ,it
 ,psychology
 ,liberal
@@ -195,20 +257,42 @@
 ,systems
 ,technology
 ,agronomy
+,money
+
+&science
+,sciences
+,molecules
+,electrostatics,
+,micro
+,macro
+,material
+,experiment
+,experiments
+,electrical
+,chemist
+,temperature
+,polymers
+,blueprints
+,inventor
+,toxicology
 
 &freshman
 ,sophomore
 ,senior
 ,junior
+,undergraduate
 
 &dynamic
 ,adaptable
 ,fastpaced
 ,comfortable
 ,change
+,readapted
+,flexibility
 
 &degree
 ,internship
+,intern
 ,ba
 ,bs
 ,ma
@@ -243,6 +327,15 @@
 ,detail
 ,intense
 ,fastpace
+,paced
+,accuracy
+,informative
+,calculated
+,awareness
+,thinker
+,reliable
+,perfecting
+,detailing
 
 &simple
 ,clear
@@ -253,6 +346,8 @@
 
 &medical
 ,clinical
+,cancer
+,pharmacies
 
 &recieptive
 
@@ -262,9 +357,23 @@
 
 &organization
 ,organizing
+,organized
+,organizational
+,managing
 ,coordinating
+,auditing
+,controls
+,developed
+,responsible
+,management
+,conducted
+,leadership
+,design
+,managerial
+,reps
+,ambassador
 
-&selfmotivated
+&promoted
 
-&confident,
-selfconfident
+&confident
+,selfconfident
