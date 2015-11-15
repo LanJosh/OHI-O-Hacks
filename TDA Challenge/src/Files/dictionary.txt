@@ -1,21 +1,5 @@
-&engineering
-,solidworks
-,matlab
-,c++
-,java
-,experiment
-,test
-
-&computer science
-,c++
-,matlab
-,java
-
-&economics
-
-&general office
-,manage
-
-&science
-,experiment
-,test
+&engineering,solidworks,matlab,c++,java,experiment,test
+&computer science,c++,matlab,java
+&economics,history
+&general office,manage
+&science,experiment,test
