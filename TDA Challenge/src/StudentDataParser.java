@@ -2,23 +2,24 @@
 import java.io.*;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Scanner;
 
-public class StudentDataParser implements IParser{
+public class StudentDataParser {
   //--Variables
-  private ArrayList <String[]> studentInfo;
-  private File file;
+  protected HashMap <String, Integer> studentInfo;
+  protected File file;
   
   //--Constructor
   public StudentDataParser(File file) {
-		studentInfo = new ArrayList<String[]>();
+		this.studentInfo = new HashMap<String,Integer>();
 		this.file = file;
 	}//end constructor
   
-  //--Methods
-  public ArrayList<String[]> parse(File file) {
+  //--Methods 
+  public void parse(File file) {
 	  try {
-		  
+		  HashMap<String,Integer> data = new HashMap<String,Integer>();
 		  Scanner fIn = new Scanner(file);
 		  
           //--Loop through the entire file
@@ -27,11 +28,17 @@ public class StudentDataParser implements IParser{
 			  String[] lineInput = fIn.nextLine().split("\\W");
 			 
 			  for(int i = 0; i < lineInput.length; i++) {
+				  if(data.containsKey(lineInput[i])) 
+					  //--If the word is already contained, increment the occurance count
+					  data.put(lineInput[i], 1 + data.get(lineInput));
+				  
+				  //--Otherwise, add the new word to the map
+				  data.put(lineInput[i], 1);
 				  
 				  //--Eliminate any one letter words, except the language 'C'
-				  if( isWordMeaningless(lineInput[i])) {
-					  continue;
-				  }//end if
+//				  if( isWordMeaningless(lineInput[i])) {
+//					  continue;
+//				  }//end if
 				  
 				  //--Process the word 
 				  processWord(lineInput[i]);
@@ -51,11 +58,13 @@ System.out.print(lineInput[i] + " ");
           e.printStackTrace();
       }//end catch
       
-    return studentInfo;
     }//--end method
+  
+  
   
   private void processWord(String word) {
 	  StringBuffer sb = new StringBuffer();
+	  
 	  
   }//end method
   
