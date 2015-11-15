@@ -1,7 +1,5 @@
 
-
 import java.io.*;
-import java.net.URL;
 
 public class source {
 
@@ -11,18 +9,18 @@ public class source {
 		// TODO Read data from files
 			//--Read student resume data
 			String cwd =  new File("src/Files/TDA Students Test.csv").getAbsolutePath();
-			System.out.println(cwd);
+//System.out.println(cwd);
 			File studentData = new File(cwd);
 			StudentDataParser sdp = new StudentDataParser(studentData);
-//        	sdp.parse(studentData);
+        	sdp.parse(studentData);
         	
         	//--Read job postings data
         	//TODO add file input code here
-        	String jobsDataPath =  new File("src/Files/TDA Jobs Data Test.csv").getAbsolutePath();
-			System.out.println(jobsDataPath );
-			File jobData = new File(jobsDataPath);
-			JobsParser jp = new JobsParser(jobData);
-        	jp.parse(jobData);
+//        	String jobsDataPath =  new File("src/Files/TDA Jobs Data Test.csv").getAbsolutePath();
+//			System.out.println(jobsDataPath );
+//			File jobData = new File(jobsDataPath);
+//			JobsParser jp = new JobsParser(jobData);
+//        	jp.parse(jobData);
         	
 		// TODO Parse data & return weights
 		
