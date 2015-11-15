@@ -75,11 +75,13 @@ System.out.print(lineInput[i] + " ");
   
   //--Determines whether or not a word is not important to the skill matching of this program
   boolean isWordMeaningless(String word) {
-	  
-	  if(word.equals("C") && word.length() <= 1) return true;
-	  if(isNumeric(word))	return false;
-	  
-	  else return false; 
+	  String[] commonWords = {"the", "how", "because", "why", "have", "with", "that"}; //etc
+	  for (String s : commonWords) {
+		  if (word.equals(s)) return true;
+	  }
+	  if(!word.equals("C") && word.length() <= 2) return true;
+
+	  return false;
   }//end method
 		  
 
