@@ -33,7 +33,7 @@ public class JobsParser implements IParser  {
             		employerProfile[i] = line;
             	}
             	// Throwaway column
-            	sc.next();
+            	//sc.next();
             	employerProfiles.add(employerProfile);
             }
         } catch (Exception e) {

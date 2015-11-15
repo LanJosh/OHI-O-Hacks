@@ -1,3 +1,4 @@
+import java.lang.Math;
 /*
  * Coordinate point of profile
  * 
@@ -5,30 +6,31 @@
  */
 public class coordinates {
 	// Dimensions
-	int engineering;
-	int math;
 	int science;
 	int business;
+	int eng;
+	int cs;
 	
 	public coordinates(){
-		engineering = 0;
-		math = 0;
 		science = 0;
 		business = 0;
+		eng = 0;
+		cs = 0;
 	}
 	
 	/* 
 	 * Returns a score corresponding to how close the participate was to fulfilling expected requirements. 
 	 * Closer to zero the better
 	 */
-	public int compareTo(Profile profile){
-		coordinates comparePoint = profile.point;
+	public int compareTo(Profile profile){		
+		coordinates compare = profile.point;
+
+		int scienceDiff = Math.abs(compare.science - science);
+		int businessDiff = Math.abs(compare.business - business);
+		int engDiff = Math.abs(compare.eng - eng);
+		int csDiff = Math.abs(compare.cs - cs);
 		
-		comparePoint.engineering = comparePoint.engineering - this.engineering;
-		comparePoint.math = comparePoint.math - this.math;
-		comparePoint.science = comparePoint.science - this.science;
-		comparePoint.business = comparePoint.business - this.business;
 		
-		return comparePoint.engineering + comparePoint.math + comparePoint.science + comparePoint.business;
+		return scienceDiff + businessDiff + engDiff + csDiff;
 	}
 }

@@ -95,7 +95,7 @@ public class StudentDataParser {
 //}//end loop
 			  //--Add completed hashmap object to the array list to the corresponding
 			  //  row number
-			  System.out.println("Done with row: " + studentEntryNum);
+			//  System.out.println("Done with row: " + studentEntryNum);
 			  allStudentData.add(studentEntryNum++, studentInfo);
 			  //--Trash the hashmap, we've already copied the data to the ArrayList
 			  data = null;

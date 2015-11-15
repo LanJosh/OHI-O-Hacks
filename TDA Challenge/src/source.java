@@ -1,12 +1,28 @@
 
 import java.io.*;
 import java.net.URL;
-import java.util.ArrayList;
+import java.util.ArrayList;import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
 
 public class source {
-
+	
 	public static void main(String[] args) {
 		System.out.println("Running!\n");
+		AnalysisTool analyzer = new AnalysisTool();
+		String cwd = new File("src/files/TDA Students Test.csv").getAbsolutePath();
+		File studentData = new File(cwd);
+	//	analyzer.studentAverage(studentData);
+		
+		
+		
+		
+		
+		
 	/*	try {
 		// TODO Read data from files
 			//--Read student resume data
@@ -33,21 +49,7 @@ public class source {
 			e.printStackTrace();
 		}//end catch
 		*/
-		ArrayList<String[]> test = new ArrayList<String[]>();
-		ArrayList<String[]> test2 = new ArrayList<String[]>();
 		
-		try {
-			String jobsDataFile = new File("src/Files/test").getAbsolutePath();
-			File jobsData = new File(jobsDataFile);
-			JobsParser jp = new JobsParser(jobsData);
-			test = jp.parse(jobsData);
-			test2 = jp.employerProfiles;
-			System.out.println(test.size());
-			System.out.println(test2.size());
-
-		} catch(Exception e) {
-			e.printStackTrace();
-		}
 	}//end main
 
 }//end class
