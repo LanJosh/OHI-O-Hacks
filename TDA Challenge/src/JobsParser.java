@@ -32,8 +32,8 @@ public class JobsParser implements IParser  {
             		line.replaceAll("[^a-zA-Z0-9]+","");
             		employerProfile[i] = line;
             	}
-            	// sc.nextLine();
-            	
+            	// Throwaway column
+            	sc.next();
             	employerProfiles.add(employerProfile);
             }
         } catch (Exception e) {
